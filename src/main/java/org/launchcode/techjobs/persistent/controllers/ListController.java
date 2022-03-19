@@ -45,11 +45,8 @@ public class ListController {
 
     @RequestMapping("")
     public String list(Model model) {
-        List employers = (List<Employer>) employerRepository.findAll();
-        model.addAttribute("employers",employers);
-
-        List skills = (List<Skill>) skillRepository.findAll();
-        model.addAttribute("skills", skills);
+        model.addAttribute("employers", employerRepository.findAll());
+        model.addAttribute("skills", skillRepository.findAll());
 
         return "list";
     }
@@ -69,3 +66,16 @@ public class ListController {
         return "list-jobs";
     }
 }
+
+
+
+
+
+
+
+
+//    List employers = (List<Employer>) employerRepository.findAll();
+//        model.addAttribute("employers",employers);
+//
+//                List skills = (List<Skill>) skillRepository.findAll();
+//        model.addAttribute("skills", skills);

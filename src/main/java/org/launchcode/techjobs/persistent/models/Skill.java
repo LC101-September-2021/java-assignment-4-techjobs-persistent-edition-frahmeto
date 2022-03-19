@@ -16,7 +16,6 @@ public class Skill extends AbstractEntity {
 
 //part#4 setting up a many-many r/ship
     @ManyToMany(mappedBy = "skills")
-    @NotNull
     private List<Job> jobs = new ArrayList<>();
 
     //No-arg constructor

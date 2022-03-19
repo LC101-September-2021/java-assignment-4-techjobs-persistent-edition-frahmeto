@@ -2,7 +2,6 @@ package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -20,16 +19,16 @@ public class Employer extends AbstractEntity {
     //part#3, adding job field to employer
     @OneToMany
     @JoinColumn(name = "employer_id")
-    private final List<Job> jobs = new ArrayList<>();
+    private  List<Job> jobs = new ArrayList<>();
 
     //No- arg constructor
     public Employer(){}
 
     //constructor
-    public Employer(String location) {
-        super();
-        this.location = location;
-    }
+//    public Employer(String location) {
+//        super();
+//        this.location = location;
+//    }
 
     //Getter && Setter
     public String getLocation() {
@@ -38,5 +37,13 @@ public class Employer extends AbstractEntity {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 }
