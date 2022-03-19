@@ -19,11 +19,11 @@ public class EmployerController {
     @Autowired
     private EmployerRepository employerRepository;
 
-    @RequestMapping("")
-    public String index(Model model) {
-        model.addAttribute("employers", employerRepository.findAll());
-        return "index";
-    }
+//    @RequestMapping("")
+//    public String index(Model model) {
+//        model.addAttribute("employers", employerRepository.findAll());
+//        return "index";
+//    }
    //part2,controller #2
     @GetMapping
     public String displayEmployerIndex(Model model){

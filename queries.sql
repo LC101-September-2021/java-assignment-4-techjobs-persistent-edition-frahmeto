@@ -14,6 +14,12 @@ Where Location = "St.Louis City";
 
 -- Part 3: Test it with SQL
 --write the SQL statement to remove the job table.
-drop table job;
+DROP TABLE job;
 
 -- Part 4: Test it with SQL
+
+SELECT *
+FROM skill INNER JOIN
+    job_skills ON skill.id = job_skills.skills_id
+WHERE job_skills.jobs_id IS NOT NULL
+ORDER BY name ASC;

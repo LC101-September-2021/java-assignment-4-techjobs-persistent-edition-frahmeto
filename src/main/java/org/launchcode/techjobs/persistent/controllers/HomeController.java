@@ -60,21 +60,23 @@ public class HomeController {
                                         @RequestParam List<Integer> skills) {
 
         if (errors.hasErrors()) {
-//            model.addAttribute("title", "Add Job");
+//            //testing
+            model.addAttribute("title", "Add Job");
 //            model.addAttribute("employers", employerRepository.findAll());
 //            model.addAttribute("skills", skillRepository.findAll());
 
             return "add";
         }
 
-//       // Optional<Employer> optEmployer = employerRepository.findById(employerId);
+        //testing
+//       Optional<Employer> optEmployer = employerRepository.findById(employerId);
 //        if(optEmployer.isPresent()){
 //                Employer employer = optEmployer.get();
 //                newJob.setEmployer(employer);
 //            }
        Employer newEmployer = employerRepository.findById(employerId).orElse(new Employer());
         newJob.setEmployer(newEmployer);
-       // jobRepository.save(newJob);
+        jobRepository.save(newJob);
 
 
         List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
@@ -106,8 +108,13 @@ public class HomeController {
 
 
 
+//    List jobs = (List<Job>) jobRepository.findAll();
+//        model.addAttribute("jobs", jobs );
 
 
+//    Optional<Employer> newEmployer = employerRepository.findById(employerId);
+//    Employer employer = newEmployer.get();
+//        newJob.setEmployer(employer);
 
 
 // model.addAttribute("title", "Add Job");
