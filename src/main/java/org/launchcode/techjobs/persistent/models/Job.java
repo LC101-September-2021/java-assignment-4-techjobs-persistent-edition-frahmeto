@@ -14,7 +14,7 @@ public class Job extends AbstractEntity{
 
 //    part#4 setting up a many-many r/ship
     @ManyToMany
-    @NotNull(message = "At least one skill is required.")
+    //@NotNull(message = "At least one skill is required.")
     private List<Skill> skills = new ArrayList<>();
 
 
@@ -27,7 +27,10 @@ public class Job extends AbstractEntity{
         this.employer = anEmployer;
         this.skills = someSkills;
     }
-
+    //adding this remove it when you need to, testing
+    public void addSkill(Skill skill){
+        this.skills.add(skill);
+    }
     // Getters and setters.
 
     public Employer getEmployer() {

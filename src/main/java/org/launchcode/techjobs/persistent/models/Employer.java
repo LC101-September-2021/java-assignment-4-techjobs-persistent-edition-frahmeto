@@ -24,11 +24,6 @@ public class Employer extends AbstractEntity {
     //No- arg constructor
     public Employer(){}
 
-    //constructor
-//    public Employer(String location) {
-//        super();
-//        this.location = location;
-//    }
 
     //Getter && Setter
     public String getLocation() {
@@ -39,11 +34,35 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
-    public List<Job> getJobs() {
-        return jobs;
-    }
-
-    public void setJobs(List<Job> jobs) {
-        this.jobs = jobs;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//constructor
+//    public Employer(String location) {
+//        super();
+//        this.location = location;
+//    }
+
+
+
+//    public List<Job> getJobs() {
+////        return jobs;
+////    }
+////
+////    public void setJobs(List<Job> jobs) {
+////        this.jobs = jobs;
+////    }
