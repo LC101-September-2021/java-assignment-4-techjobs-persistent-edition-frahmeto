@@ -9,7 +9,6 @@ AND  table_name ='job';
 --write a query to list the names of the employers in St. Louis City.
 SELECT name
 FROM employer
---Where Location = "saint louis";
 Where Location = "St. Louis City";
 
 -- Part 3: Test it with SQL
@@ -17,9 +16,11 @@ Where Location = "St. Louis City";
 DROP TABLE job;
 
 -- Part 4: Test it with SQL
+--write a query to return a list of the names and
+--descriptions of all skills that are attached to jobs in alphabetical order
 
 SELECT *
-FROM skill INNER JOIN
-    job_skills ON skill.id = job_skills.skills_id
+FROM skill INNER JOIN job_skills
+ON skill.id = job_skills.skills_id
 WHERE job_skills.jobs_id IS NOT NULL
 ORDER BY name ASC;

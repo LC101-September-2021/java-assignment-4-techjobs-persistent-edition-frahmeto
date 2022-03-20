@@ -28,14 +28,14 @@ public class EmployerController {
    //part2,controller #2
     @GetMapping
     public String displayEmployerIndex(Model model){
-        model.addAttribute("title", "All Employers");
+       // model.addAttribute("title", "All Employers");
         model.addAttribute("employers", employerRepository.findAll());
         return "employers/index";
     }
 
     @GetMapping("add")
     public String displayAddEmployerForm(Model model) {
-        model.addAttribute("title", "All Employers");
+       // model.addAttribute("title", "All Employers");
         model.addAttribute(new Employer());
         return "employers/add";
     }
@@ -45,8 +45,6 @@ public class EmployerController {
                                     Errors errors, Model model) {
 
         if (errors.hasErrors()) {
-           // model.addAttribute("title", "Add Employer");
-            //model.addAttribute("employer", employerRepository.findAll());
             return "employers/add";
         }
     // part2,controller #3
@@ -65,8 +63,24 @@ public class EmployerController {
             model.addAttribute("employer", employer);
             return "employers/view";
         } else {
-            //model.addAttribute("title", "Invalid Employer ID: " + employerId);
             return "redirect:../";
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// model.addAttribute("title", "Add Employer");
+////model.addAttribute("employer", employerRepository.findAll());

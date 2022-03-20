@@ -11,12 +11,13 @@ import java.util.List;
 public class Skill extends AbstractEntity {
 
 //part#2 adding description
+    @NotNull(message = "Please Enter a description.")
     @Size(max = 255, message = "Description must be under 255 characters.")
     private String description;
 
 //part#4 setting up a many-many r/ship
     @ManyToMany(mappedBy = "skills")
-    private final List<Job> jobs = new ArrayList<>();
+    private  List<Job> jobs = new ArrayList<>();
 
     //No-arg constructor
     public Skill(){}
@@ -30,6 +31,7 @@ public class Skill extends AbstractEntity {
     public List<Job> getJobs(){
         return jobs;
     }
+
     //for now
 //    public void setJobs(List<Job> jobs){
 //        this.jobs = jobs;

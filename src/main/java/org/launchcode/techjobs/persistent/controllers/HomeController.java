@@ -38,7 +38,7 @@ public class HomeController {
     //part#3 updating
     @RequestMapping("")
     public String index(Model model) {
-       // model.addAttribute("title", "My Jobs");
+        model.addAttribute("title", "My Jobs");
        // model.addAttribute("jobs", jobRepository.findAll());
         //for now
         List jobs = (List<Job>) jobRepository.findAll();
