@@ -9,8 +9,8 @@ AND  table_name ='job';
 --write a query to list the names of the employers in St. Louis City.
 SELECT name
 FROM employer
---Where Location = "saint louis";
-Where Location = "St.Louis City";
+Where Location = "saint louis";
+--Where Location = "St.Louis City";
 
 -- Part 3: Test it with SQL
 --write the SQL statement to remove the job table.
