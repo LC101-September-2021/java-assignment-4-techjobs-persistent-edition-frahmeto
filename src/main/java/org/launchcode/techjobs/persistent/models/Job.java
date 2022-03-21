@@ -14,6 +14,7 @@ public class Job extends AbstractEntity{
 
 //    part#4 setting up a many-many r/ship
     @ManyToMany
+    @NotNull(message = "Please select at least one skill.")
     private List<Skill> skills = new ArrayList<>();
 
 
@@ -48,6 +49,12 @@ public class Job extends AbstractEntity{
         this.skills = skills;
     }
 }
+
+
+
+
+
+
 
 
 
