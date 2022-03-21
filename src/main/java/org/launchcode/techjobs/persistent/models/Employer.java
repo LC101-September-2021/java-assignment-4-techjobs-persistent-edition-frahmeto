@@ -13,7 +13,7 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @NotBlank(message = "Location is required")
-    @Size(max = 150)
+    @Size(min= 2, max = 150)
     private String location;
 
     //part#3, adding job field to employer

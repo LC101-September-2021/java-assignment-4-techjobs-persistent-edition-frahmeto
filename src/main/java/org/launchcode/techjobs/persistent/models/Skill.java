@@ -22,7 +22,7 @@ public class Skill extends AbstractEntity {
     //No-arg constructor
     public Skill(){}
 
-    //for now
+
 //    public Skill(String description) {
 //        super();
 //        this.description = description;
@@ -32,10 +32,10 @@ public class Skill extends AbstractEntity {
         return jobs;
     }
 
-    //for now
-//    public void setJobs(List<Job> jobs){
-//        this.jobs = jobs;
-//    }
+
+    public void setJobs(List<Job> jobs){
+        this.jobs = jobs;
+    }
 
     public String getDescription() {
         return description;

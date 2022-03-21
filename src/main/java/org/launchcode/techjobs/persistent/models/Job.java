@@ -17,7 +17,6 @@ public class Job extends AbstractEntity{
     @NotNull(message = "Please select at least one skill.")
     private List<Skill> skills = new ArrayList<>();
 
-
   //N0-arg constructor
     public Job() {
     }
@@ -27,7 +26,7 @@ public class Job extends AbstractEntity{
         this.employer = anEmployer;
         this.skills = someSkills;
     }
-    //for now
+
     public void addSkill(Skill skill){
         this.skills.add(skill);
     }
