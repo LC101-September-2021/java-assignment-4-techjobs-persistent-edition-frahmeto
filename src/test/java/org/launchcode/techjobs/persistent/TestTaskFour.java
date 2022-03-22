@@ -9,7 +9,9 @@ import org.launchcode.techjobs.persistent.controllers.ListController;
 import org.launchcode.techjobs.persistent.models.Employer;
 import org.launchcode.techjobs.persistent.models.Job;
 import org.launchcode.techjobs.persistent.models.Skill;
+import org.launchcode.techjobs.persistent.models.data.EmployerRepository;
 import org.launchcode.techjobs.persistent.models.data.JobRepository;
+import org.launchcode.techjobs.persistent.models.data.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
@@ -152,7 +154,7 @@ public class TestTaskFour extends AbstractTest {
 //        Field employerRepositoryField = homeControllerClass.getDeclaredField("employerRepository");
 //        employerRepositoryField.setAccessible(true);
 //        employerRepositoryField.set(homeController, employerRepository);
-
+//
 //        Field jobRepositoryField = homeControllerClass.getDeclaredField("jobRepository");
 //            jobRepositoryField.setAccessible(true);
 //            jobRepositoryField.set(homeController, jobRepository);

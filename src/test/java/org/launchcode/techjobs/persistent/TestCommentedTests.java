@@ -14,6 +14,7 @@ public class TestCommentedTests extends AbstractTest {
         Class testTaskTwoClass = getClassByName("TestTaskTwo");
         int numTests = testTaskTwoClass.getMethods().length;
         assertEquals(36, numTests);
+        //assertEquals(28, numTests);
     }
 
     @Test
@@ -21,6 +22,7 @@ public class TestCommentedTests extends AbstractTest {
         Class testTaskThreeClass = getClassByName("TestTaskThree");
         int numTests = testTaskThreeClass.getMethods().length;
         assertEquals(16, numTests);
+        //assertEquals(15, numTests);
     }
 
     @Test
@@ -28,5 +30,6 @@ public class TestCommentedTests extends AbstractTest {
         Class testTaskTwoClass = getClassByName("TestTaskFour");
         int numTests = testTaskTwoClass.getMethods().length;
         assertEquals(19, numTests);
+       // assertEquals(15, numTests);
     }
 }
